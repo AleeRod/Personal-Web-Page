@@ -1,10 +1,15 @@
+import HuellitasVitalesImg from '../assets/images/projects/HuellitasVitales.jpg';
+import GymControlImg from '../assets/images/projects/GymControl.jpg';
+import NasrodNotesImg from '../assets/images/projects/NASROD-NOTES.jpg';
+import HeroAvatarImg from '../assets/images/avatar/HeroAvatar ARCH.png';
+
 const projects = [
   {
     title: 'HuellitasVitales',
     description:
       'Aplicación moderna para la gestion de una veterinaria, con funcionalidades de registro de clientes, mascotas, citas y pagos en línea.',
     stack: ['React + Vite', 'C#', 'PostreSQL (Supabase)', '.NET Core 6+'],
-    image: '/assets/images/projects/HuellitasVitales.jpg',
+    image: HuellitasVitalesImg,
     link: 'https://github.com/AleeRod/HuellitasVitales',
   },
   {
@@ -12,7 +17,7 @@ const projects = [
     description:
       'Aplicación web para la gestión de un gimnasio, con funcionalidades de registro de clientes, control de pagos y seguimiento de progreso físico.',
     stack: ['PHP', 'HTML', 'CSS', 'JavaScript', 'MySQL'],
-    image: '/assets/images/projects/GymControl.jpg',
+    image: GymControlImg,
     link: 'https://github.com/AleeRod/Gym-Control',
   },
   {
@@ -20,7 +25,7 @@ const projects = [
     description:
       'Bloc de notas del proceso de creación de mi NAS casero, un proyecto personal que documenta cada paso del proceso de construcción y configuración del sistema.',
     stack: ['Open Media Vault + OMV Extras', 'Docker', 'Jellyfin + Plex','Pihole + Adguard', 'Homarr','Linux'],
-    image: '/assets/images/projects/NASROD-NOTES.jpg',
+    image: NasrodNotesImg,
     link: 'https://github.com/AleeRod/NASROD-NOTES',
   },
 ];
@@ -122,7 +127,7 @@ function App() {
 
           <div className="hero-card">
             <div className="avatar-ring">
-              <img className="avatar" src="/assets/images/avatar/HeroAvatar ARCH.png" alt="Alejandro Rodríguez Chacón" />
+              <img className="avatar" src={HeroAvatarImg} alt="Alejandro Rodríguez Chacón" />
             </div>
             <div className="card-info">
               <span className="label">Disponible para proyectos</span>

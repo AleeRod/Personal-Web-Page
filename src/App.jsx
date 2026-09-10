@@ -100,10 +100,18 @@ function App() {
               funcionales, modernas y seguras desde el diseño hasta la implementación.
             </p>
             <div className="cta-row">
-              <a className="btn primary" href="#projects">Ver proyectos</a>
-              <a className="btn secondary" href="#contact">Contactame</a>
-              <a className="btn tertiary" href="/cv/CV_Alejandro_Rodriguez_EN.pdf" download="CV_Alejandro_Rodriguez_EN.pdf">Descargar CV en inglés</a>
-              <a className="btn tertiary" href="/cv/CV_Alejandro_Rodriguez_ES.pdf" download="CV_Alejandro_Rodriguez_ES.pdf">Descargar CV en español</a>
+              <div className="primary-actions">
+                <a className="btn primary" href="#projects">Ver proyectos</a>
+                <a className="btn secondary" href="#contact">Contáctame</a>
+              </div>
+
+              <div className="cv-actions" aria-label="Descargar CV">
+                <span className="cv-label">Descargar CV</span>
+                <div className="download-row">
+                  <a className="btn tertiary" href="/cv/CV_Alejandro_Rodriguez_EN.pdf" download="CV_Alejandro_Rodriguez_EN.pdf">Inglés</a>
+                  <a className="btn tertiary alt" href="/cv/CV_Alejandro_Rodriguez_ES.pdf" download="CV_Alejandro_Rodriguez_ES.pdf">Español</a>
+                </div>
+              </div>
             </div>
             <ul className="mini-stats">
               <li><strong>3+</strong><span>Años</span></li>

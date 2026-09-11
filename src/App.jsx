@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import HuellitasVitalesImg from '../assets/images/projects/HuellitasVitales.jpg';
 import GymControlImg from '../assets/images/projects/GymControl.jpg';
 import NasrodNotesImg from '../assets/images/projects/NASROD-NOTES.jpg';
@@ -82,15 +83,35 @@ const skills = [
 ];
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <div className="page-shell">
       <header className="topbar">
-        <div className="brand">Alejandro Rodríguez Chacón</div>
-        <nav className="nav">
-          <a href="#about">Sobre mí</a>
-          <a href="#projects">Proyectos</a>
-          <a href="#experience">Experiencia</a>
-          <a href="#contact">Contacto</a>
+        <div className="brand-wrap">
+          <div className="brand-mark">AR</div>
+          <div className="brand">Alejandro Rodríguez Chacón</div>
+        </div>
+
+        <button
+          type="button"
+          className={`nav-toggle ${menuOpen ? 'is-open' : ''}`}
+          aria-label="Abrir menú"
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((prev) => !prev)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        <nav className={`nav ${menuOpen ? 'is-open' : ''}`}>
+          <a href="#about" onClick={closeMenu}>Sobre mí</a>
+          <a href="#projects" onClick={closeMenu}>Proyectos</a>
+          <a href="#experience" onClick={closeMenu}>Experiencia</a>
+          <a href="#contact" onClick={closeMenu}>Contacto</a>
         </nav>
       </header>
 

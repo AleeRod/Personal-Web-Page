@@ -670,6 +670,99 @@ img {
   line-height: 1.7;
 }
 
+.certification-groups {
+  display: grid;
+  gap: 28px;
+}
+
+.certification-group-title {
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.upcoming-title {
+  color: #b6c9eb;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.certification-card {
+  padding: 22px 20px;
+  background: linear-gradient(180deg, rgba(15, 24, 38, 0.9), rgba(12, 18, 28, 0.96));
+  border: 1px solid rgba(144, 171, 255, 0.15);
+  border-radius: 22px;
+  box-shadow: 0 18px 36px rgba(2, 6, 15, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.certification-card.upcoming {
+  border-color: rgba(182, 201, 235, 0.18);
+  background: linear-gradient(180deg, rgba(17, 25, 38, 0.8), rgba(14, 18, 29, 0.9));
+  opacity: 0.92;
+}
+
+.certification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.certification-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(115, 240, 198, 0.35);
+  background: rgba(115, 240, 198, 0.12);
+  color: #bfffe8;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.certification-badge.upcoming {
+  border-color: rgba(182, 201, 235, 0.35);
+  background: rgba(182, 201, 235, 0.08);
+  color: #dfe9ff;
+}
+
+.certification-year {
+  color: var(--accent);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.certification-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 8px;
+  color: #f0f6ff;
+  font-weight: 700;
+}
+
+.certification-issuer {
+  margin-bottom: 10px;
+  color: #d5e2f7;
+  font-weight: 600;
+}
+
+.certification-card p:last-child {
+  color: #c6d7f1;
+  line-height: 1.7;
+}
+
 .skills-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -754,7 +847,8 @@ img {
 @media (max-width: 960px) {
   .hero,
   .project-grid,
-  .about-grid {
+  .about-grid,
+  .certifications-grid {
     grid-template-columns: 1fr;
   }
 

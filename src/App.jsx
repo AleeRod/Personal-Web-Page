@@ -74,6 +74,61 @@ const experience = [
   },
 ];
 
+const certifications = {
+  earned: [
+    {
+      name: 'Cyber Threat Management',
+      issuer: 'Cisco Networking Academy',
+      year: '2026',
+      description: 'Identificación, análisis y gestión de amenazas cibernéticas, incluyendo monitoreo de seguridad, respuesta a incidentes y uso de herramientas SOC (Security Operations Center).',
+    },
+    {
+      name: 'AI Skills Fest 2026',
+      issuer: 'Microsoft',
+      year: '2026',
+      description: 'Formación intensiva en habilidades de inteligencia artificial aplicadas, cubriendo herramientas y buenas prácticas para integrar IA en flujos de trabajo profesionales.',
+    },
+    {
+      name: 'Getting Started with Cybersecurity',
+      issuer: 'IBM SkillsBuild',
+      year: '2026',
+      description: 'Introducción al mundo de la ciberseguridad: principios básicos de seguridad de la información, tipos de ataques comunes y el rol del profesional de seguridad en las organizaciones.',
+    },
+    {
+      name: 'Cybersecurity Fundamentals',
+      issuer: 'IBM SkillsBuild',
+      year: '2026',
+      description: 'Fundamentos esenciales de ciberseguridad: conceptos clave de amenazas, vulnerabilidades y buenas prácticas para proteger sistemas y datos en entornos empresariales.',
+    },
+  ],
+  upcoming: [
+    {
+      name: 'Security +',
+      issuer: 'CompTIA',
+      year: 'Coming Soon',
+      description: 'Certificación fundamental en ciberseguridad que cubre gestión de riesgos, criptografía, seguridad de redes y control de accesos, junto con procesos de respuesta ante incidentes.',
+    },
+    {
+      name: 'Network +',
+      issuer: 'CompTIA',
+      year: 'Coming Soon',
+      description: 'Certificación en redes que abarca configuración, administración y resolución de problemas en infraestructuras empresariales, incluyendo protocolos, topologías y conectividad.',
+    },
+    {
+      name: 'PenTest +',
+      issuer: 'CompTIA',
+      year: 'Coming Soon',
+      description: 'Certificación enfocada en pruebas de penetración, donde se planifican y ejecutan evaluaciones de vulnerabilidades mediante técnicas de hacking ético y herramientas de escaneo especializadas.',
+    },
+    {
+      name: 'CySa +',
+      issuer: 'CompTIA',
+      year: 'Coming Soon',
+      description: 'Certificación orientada al análisis de amenazas, con uso de herramientas de monitoreo y SIEM para la detección temprana y respuesta efectiva ante incidentes de seguridad.',
+    },
+  ],
+};
+
 const skills = [
   'React, Angular, Vite, Node.js',
   'HTML, JavaScript, CSS, PHP',
@@ -111,6 +166,7 @@ function App() {
           <a href="#about" onClick={closeMenu}>Sobre mí</a>
           <a href="#projects" onClick={closeMenu}>Proyectos</a>
           <a href="#experience" onClick={closeMenu}>Experiencia</a>
+          <a href="#certifications" onClick={closeMenu}>Certificaciones</a>
           <a href="#contact" onClick={closeMenu}>Contacto</a>
         </nav>
       </header>
@@ -223,6 +279,49 @@ function App() {
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section id="certifications" className="content-section">
+          <div className="section-heading">
+            <p className="eyebrow">Certificaciones</p>
+            <h2>Formación y credenciales relevantes</h2>
+          </div>
+
+          <div className="certification-groups">
+            <div>
+              <h3 className="certification-group-title">Obtenidas</h3>
+              <div className="certifications-grid">
+                {certifications.earned.map((cert) => (
+                  <article className="certification-card" key={cert.name}>
+                    <div className="certification-header">
+                      <span className="certification-badge earned">Certificado</span>
+                      <span className="certification-year">{cert.year}</span>
+                    </div>
+                    <h3>{cert.name}</h3>
+                    <p className="certification-issuer">{cert.issuer}</p>
+                    <p>{cert.description}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="certification-group-title upcoming-title">Próximas</h3>
+              <div className="certifications-grid">
+                {certifications.upcoming.map((cert) => (
+                  <article className="certification-card upcoming" key={cert.name}>
+                    <div className="certification-header">
+                      <span className="certification-badge upcoming">Coming soon</span>
+                      <span className="certification-year">{cert.year}</span>
+                    </div>
+                    <h3>{cert.name}</h3>
+                    <p className="certification-issuer">{cert.issuer}</p>
+                    <p>{cert.description}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
